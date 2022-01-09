@@ -1,6 +1,7 @@
 const axios = require('axios');
 const { parseToken, parseSalt, parseNonce } = require('./utils');
 const CryptoJS = require('./crypto.js');
+const Email = require('./mail');
 const xml2js = require('xml2js');
 const fs = require('fs');
 const parser = new xml2js.Parser();
@@ -122,8 +123,8 @@ module.exports = {
             });
             if (newIp.length) {
                 fs.writeFileSync('./hosts.json', JSON.stringify(db.concat(newIp)));
+                await Email(JSON.stringify(newIp));
             }
-            console.log(newIp);
            
             return module.exports.logout();
         } catch (e) {
