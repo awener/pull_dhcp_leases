@@ -1,0 +1,23 @@
+{
+  "name": "wifi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awener/pull_dhcp_leases.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awener/pull_dhcp_leases/issues"
+  },
+  "homepage": "https://github.com/awener/pull_dhcp_leases#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "xml2js": "^0.4.23"
+  }
+}
